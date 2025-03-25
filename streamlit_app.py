@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 # Velocity v (slider + checkbox)
 col1, col2 = st.columns([3, 1])
 with col1:
-    v_raw = st.slider("Velocity (v/c)", 0.00, 0.99, 0.60, step=0.001)
+    v_raw = st.slider("Velocity (v/c)", 0.00, 0.99, 0.60, step=0.01)
 with col2:
     negate1 = st.checkbox("Negative v", key="neg_v")
 v = -v_raw if negate1 else v_raw
