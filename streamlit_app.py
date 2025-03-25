@@ -10,7 +10,7 @@ t = st.number_input("Time (t)", value=5.0)
 # Do Lorentz transformation
 gamma = 1 / np.sqrt(1 - v**2)
 x_prime = lambda x, t: gamma * (x - v * t)
-ct_prime = lambda x, t: gamma * (ct - v * x)
+ct_prime = lambda x, t: gamma * (t - v * x)
 
 # Plot
 fig, ax = plt.subplots()
