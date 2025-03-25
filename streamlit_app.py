@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # User input
-col1, col2 = st.columns([5, 1])  # Wider column for slider, narrower for checkbox
+col1, col2 = st.columns([3, 1]) 
 with col1:
     v_raw = st.slider("Velocity (v/c)", 0.0, 0.99, 0.6, step=0.001)
     u_raw = st.slider("Event (u/c)", 0.00, 0.99, 0.80, step=0.01)
