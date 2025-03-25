@@ -15,6 +15,6 @@ ct_prime = lambda x, t: gamma * (ct - v * x)
 # Plot
 fig, ax = plt.subplots()
 ax.set_title("Lorentz Transformation")
-ax.plot([0, x_prime(1, time)], [0, ct_prime(1, time)], label="Transformed Event")
+ax.plot([0, x_prime(1, t)], [0, ct_prime(1, t)], label="Transformed Event")
 ax.legend()
 st.pyplot(fig)
