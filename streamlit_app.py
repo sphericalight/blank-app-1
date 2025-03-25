@@ -5,15 +5,18 @@ import matplotlib.pyplot as plt
 # User input
 col1, col2 = st.columns([3, 1]) 
 with col1:
-    v_raw = st.slider("Velocity (v/c)", 0.0, 0.99, 0.6, step=0.001)
-    u_raw = st.slider("Event (u/c)", 0.00, 0.99, 0.80, step=0.01)
+    v_raw = st.slider("Velocity (v/c)", 0.0, 0.99, 0.6, step=0.001)   
     
 with col2:
     negate1 = st.checkbox("Negative")
-    negate2 = st.checkbox("Negative")
+   
     
 # Flip sign if checkbox is checked
 v = -v_raw if negate1 else v_raw
+
+u_raw = st.slider("Event (u/c)", 0.00, 0.99, 0.80, step=0.01)
+negate2 = st.checkbox("Negative")
+
 u = -u_raw if negate2 else u_raw
 
 ct = st.number_input("Time (ct)", value=5.0)
