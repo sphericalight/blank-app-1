@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # User input
-v_raw = st.slider("Velocity (v/c)", 0.0, 0.99, 0.6, step=0.001)   
+v_raw = st.slider("Velocity (v/c)", 0.00, 0.99, 0.60, step=0.001)   
 negate1 = st.checkbox("Negative")
 v = -v_raw if negate1 else v_raw
 
