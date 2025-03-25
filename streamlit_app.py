@@ -84,9 +84,9 @@ ax1.plot([0, x_alpha], [0, y_alpha], 'g-', linewidth=1.2)
 ax1.plot([0, x_phi], [0, y_phi], 'k-', linewidth=1.2)
 
 # **Draw arcs to represent angles α and φ**
-arc_radius_alpha = 0.6   # Smaller arc for α
-arc_radius_phi = 1.0     # Larger arc for φ
-arc_radius_phi_prime=0.7
+arc_radius_alpha = 0.6*ct/5   # Smaller arc for α
+arc_radius_phi = 1.0*ct/5     # Larger arc for φ
+arc_radius_phi_prime=0.7*ct/5
 
 theta_alpha = np.linspace(0, alpha, 30)  # Small arc for α
 x_arc_alpha = arc_radius_alpha * np.cos(theta_alpha)
@@ -237,7 +237,6 @@ if show_prime:
 for key, cell in table1.get_celld().items():
     if key[0] == 0:  # Row index 0 is for column headers
         cell.set_text_props(ha='right', va='center', fontweight='normal')  # right align
-
 
 # Grid for main plot
 ax1.grid(True, linestyle='--', alpha=0.5)
