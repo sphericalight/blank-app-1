@@ -3,16 +3,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # User input
-v_raw = st.slider("Velocity (v/c)", 0.00, 0.99, 0.60, step=0.01)
-# Checkbox to allow negative
-negate1 = st.checkbox("Make velocity negative")
+col1, col2 = st.columns([5, 1])  # Wider column for slider, narrower for checkbox
+with col1:
+    v_raw = st.slider("Velocity (v/c)", 0.0, 0.99, 0.6, step=0.001)
+    u_raw = st.slider("Event (u/c)", 0.00, 0.99, 0.80, step=0.01)
+    
+with col2:
+    negate1 = st.checkbox("Negative")
+    negate2 = st.checkbox("Negative")
+    
 # Flip sign if checkbox is checked
 v = -v_raw if negate1 else v_raw
-
-u_raw = st.slider("Event (u/c)", 0.00, 0.99, 0.80, step=0.01)
-# Checkbox to allow negative
-negate2 = st.checkbox("Make event negative")
-# Flip sign if checkbox is checked
 u = -u_raw if negate2 else u_raw
 
 ct = st.number_input("Time (ct)", value=5.0)
