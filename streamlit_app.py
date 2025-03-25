@@ -11,7 +11,7 @@ v = -v_raw if negate1 else v_raw
 
 u_raw = st.slider("Event (u/c)", 0.00, 0.99, 0.80, step=0.01)
 # Checkbox to allow negative
-negate2 = st.checkbox("Make velocity negative")
+negate2 = st.checkbox("Make event negative")
 # Flip sign if checkbox is checked
 u = -u_raw if negate2 else u_raw
 
