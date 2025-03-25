@@ -3,8 +3,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # User input
-#v = st.slider("Velocity (v/c)", -0.99, 0.99, 0.6)
-v = st.number_input("Enter velocity (-0.99 ≤ v < 0.99)")
+v_raw = st.slider("Velocity (v/c)", 0, 0.9900, 0.6)
+# Checkbox to allow negative
+negate = st.checkbox("Make velocity negative")
+# Flip sign if checkbox is checked
+v = -v_raw if negate else v_raw
+
 u = st.slider("Event (u/c)", -0.99, 0.99, 0.8)
 ct = st.number_input("Time (ct)", value=5.0)
 
