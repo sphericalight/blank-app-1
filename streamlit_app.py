@@ -3,7 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # User input
-v = st.slider("Velocity (v/c)", -0.99, 0.99, 0.6)
+#v = st.slider("Velocity (v/c)", -0.99, 0.99, 0.6)
+v = st.number_input("Enter velocity (-0.99 ≤ v < 0.99)")
 u = st.slider("Event (u/c)", -0.99, 0.99, 0.8)
 ct = st.number_input("Time (ct)", value=5.0)
 
