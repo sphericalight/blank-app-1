@@ -3,12 +3,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # User input
-v_raw = st.slider("Velocity (v/c)", 0.00, 0.99, 0.60, step=0.001)   
-negate1 = st.checkbox("Negative")
+# Velocity v (slider + checkbox)
+col1, col2 = st.columns([3, 1])
+with col1:
+    v_raw = st.slider("Velocity (v/c)", 0.00, 0.99, 0.60, step=0.001)
+with col2:
+    negate1 = st.checkbox("Negative v", key="neg_v")
 v = -v_raw if negate1 else v_raw
 
-u_raw = st.slider("Event (u/c)", 0.00, 0.99, 0.80, step=0.01)
-negate2 = st.checkbox("Negative")
+# Event u (slider + checkbox)
+col3, col4 = st.columns([3, 1])
+with col3:
+    u_raw = st.slider("Event (u/c)", 0.00, 0.99, 0.80, step=0.01)
+with col4:
+    negate2 = st.checkbox("Negative u", key="neg_u")
 u = -u_raw if negate2 else u_raw
 
 ct = st.number_input("Time (ct)", value=5.0)
