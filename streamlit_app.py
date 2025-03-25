@@ -3,13 +3,18 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # User input
-v_raw = st.slider("Velocity (v/c)", 0.000, 0.990, 0.600, step=0.001)
+v_raw = st.slider("Velocity (v/c)", 0.00, 0.99, 0.60, step=0.01)
 # Checkbox to allow negative
-negate = st.checkbox("Make velocity negative")
+negate1 = st.checkbox("Make velocity negative")
 # Flip sign if checkbox is checked
-v = -v_raw if negate else v_raw
+v = -v_raw if negate1 else v_raw
 
-u = st.slider("Event (u/c)", -0.99, 0.99, 0.8)
+u_raw = st.slider("Event (u/c)", 0.00, 0.99, 0.8, step=0.01)
+# Checkbox to allow negative
+negate2 = st.checkbox("Make velocity negative")
+# Flip sign if checkbox is checked
+u = -u_raw if negate2 else u_raw
+
 ct = st.number_input("Time (ct)", value=5.0)
 
 # A Real-Space Formulation of Special Relativity
