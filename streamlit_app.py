@@ -8,7 +8,7 @@ v_raw=0.6
 # Checkbox to allow negative
 negate = st.checkbox("Make velocity negative")
 # Flip sign if checkbox is checked
-#v = -v_raw if negate else v_raw
+v = -v_raw if negate else v_raw
 
 u = st.slider("Event (u/c)", -0.99, 0.99, 0.8)
 ct = st.number_input("Time (ct)", value=5.0)
