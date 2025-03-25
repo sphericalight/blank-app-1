@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # User input
 v = st.slider("Velocity (v/c)", -0.99, 0.99, 0.6)
 u = st.slider("Event (u/c)", -0.99, 0.99, 0.8)
-ct = st.number_input("Time (ct)", value=5.0)
+t = st.number_input("Time (t)", value=5.0)
 
 # Do Lorentz transformation
 gamma = 1 / np.sqrt(1 - v**2)
